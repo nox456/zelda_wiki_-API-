@@ -5,7 +5,7 @@ const db = new pg.Pool({
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
     password: process.env.DB_PASSWORD,
-    keepAlive: true
+    port: process.env.DB_PORT
 })
 
 export default db
