@@ -1,12 +1,8 @@
 # Ignore node_modules
-server/node_modules
-client/node_modules
+node_modules
 
 # Ignore .env
 .env
 
-# Ignore requests.hpp
+# Ignore requests.htpp
 requests.http
-
-# Ignore output.css of tailwind
-client/src/assets/css/output.css
