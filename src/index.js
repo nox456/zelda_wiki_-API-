@@ -31,6 +31,6 @@ app.use("/consoles", consoleRoutes)
 app.use("/enemies", enemieRoutes)
 
 // Server ON
-app.listen(app.get("port"), app.get("host"), () => {
+app.listen(app.get("port"), () => {
     console.log(`Server on http://${app.get("host")}:${app.get("port")}`);
 });
