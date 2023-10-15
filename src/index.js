@@ -25,7 +25,7 @@ app.use(express.static(join(__dirname, "public")));
 
 const accepted_origins = [
     "http://192.168.1.7:3000",
-    "http://zeldawikiserver-production.up.railway.app",
+    "http://zeldawikiclient-production.up.railway.app",
 ];
 // Routes
 app.use((req, res, next) => {
