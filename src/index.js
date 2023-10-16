@@ -23,17 +23,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(join(__dirname, "public")));
 
-const accepted_origins = [
-    "http://192.168.1.7:3000",
-    "http://zeldawikiclient-production.up.railway.app",
-];
 // Routes
 app.use((req, res, next) => {
-    const origin = req.header("origin")
-    console.log(origin)
-    if (accepted_origins.includes(origin)) {
-        res.header("Access-Control-Allow-Origin",origin)
-    }
+    res.header("Access-Control-Allow-Origin", process.env.ORIGIN_CORS)
     next();
 });
 app.use("/characters", characterRoutes);
