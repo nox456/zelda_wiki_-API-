@@ -1,9 +1,11 @@
 import pg from "pg"
 
 const db = new pg.Pool({
-    database: "zeldadb",
-    user: "postgres",
-    host: "localhost"
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT
 })
 
 export default db
