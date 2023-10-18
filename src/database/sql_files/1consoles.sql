@@ -36,7 +36,7 @@ INSERT INTO consoles VALUES
     ),
     (
         DEFAULT,
-        'Nintento Switch',
+        'Nintendo Switch',
         '03/03/2017',
         NULL,
         'consoles/nintendo_switch.webp'
