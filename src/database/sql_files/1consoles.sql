@@ -1,3 +1,4 @@
+SET datestyle = dmy;
 INSERT INTO consoles VALUES 
     (
         DEFAULT,
@@ -74,5 +75,5 @@ INSERT INTO consoles VALUES
         'Nintendo 3DS',
         '27/03/2011',
         NULL,
-        'consoles/nintendo_3ds'
+        'consoles/nintendo_3ds.webp'
     );

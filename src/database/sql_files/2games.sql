@@ -1,3 +1,4 @@
+SET datestyle = dmy;
 INSERT INTO games VALUES 
     (
         DEFAULT,

@@ -1,3 +1,4 @@
+SET datestyle = dmy;
 INSERT INTO enemies VALUES 
     (
         DEFAULT,
@@ -5,22 +6,22 @@ INSERT INTO enemies VALUES
         'Basico',
         (
             SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda'
-            OR name = 'Zelda II: The Adventure of Link'
-            OR name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Links Awakening'
-            OR name = 'The Legend of Zelda: Ocarina of Time'
-            OR name = 'The Legend of Zelda: Majoras Mask'
-            OR name = 'The Legend of Zelda: Oracle of Ages'
-            OR name = 'The Legend of Zelda: Oracle of Seasons'
-            OR name = 'The Legend of Zelda: Four Swords'
-            OR name = 'The Legend of Zelda: The Wind Waker'
-            OR name = 'The Legend of Zelda: Four Swords Adventures'
-            OR name = 'The Legend of Zelda: The Minish Cap'
-            OR name = 'The Legend of Zelda: Phantom Hourglass'
-            OR name = 'The Legend of Zelda: Spirit Tracks'
-            OR name = 'The Legend of Zelda: Skyward Sword'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
-            OR name = 'The Legend of Zelda: Breath of the Wild'
+            OR name = 'Zelda II - The Adventure of Link'
+            OR name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Links Awakening'
+            OR name = 'The Legend of Zelda - Ocarina of Time'
+            OR name = 'The Legend of Zelda - Majoras Mask'
+            OR name = 'The Legend of Zelda - Oracle of Ages'
+            OR name = 'The Legend of Zelda - Oracle of Seasons'
+            OR name = 'The Legend of Zelda - Four Swords'
+            OR name = 'The Legend of Zelda - The Wind Waker'
+            OR name = 'The Legend of Zelda - Four Swords Adventures'
+            OR name = 'The Legend of Zelda - The Minish Cap'
+            OR name = 'The Legend of Zelda - Phantom Hourglass'
+            OR name = 'The Legend of Zelda - Spirit Tracks'
+            OR name = 'The Legend of Zelda - Skyward Sword'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
+            OR name = 'The Legend of Zelda - Breath of the Wild'
         ),
         'enemies/octorok.webp'
     ),
@@ -30,19 +31,19 @@ INSERT INTO enemies VALUES
         'Basico',
         (
             SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda'
-            OR name = 'Zelda II: The Adventure of Link'
-            OR name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Links Awakening'
-            OR name = 'The Legend of Zelda: Ocarina of Time'
-            OR name = 'The Legend of Zelda: Majoras Mask'
-            OR name = 'The Legend of Zelda: Oracle of Ages'
-            OR name = 'The Legend of Zelda: Oracle of Seasons'
-            OR name = 'The Legend of Zelda: Four Swords'
-            OR name = 'The Legend of Zelda: Four Swords Adventures'
-            OR name = 'The Legend of Zelda: The Minish Cap'
-            OR name = 'The Legend of Zelda: Twilight Princess'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
-            OR name = 'The Legend of Zelda: Tri Force Heroes'
+            OR name = 'Zelda II - The Adventure of Link'
+            OR name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Links Awakening'
+            OR name = 'The Legend of Zelda - Ocarina of Time'
+            OR name = 'The Legend of Zelda - Majoras Mask'
+            OR name = 'The Legend of Zelda - Oracle of Ages'
+            OR name = 'The Legend of Zelda - Oracle of Seasons'
+            OR name = 'The Legend of Zelda - Four Swords'
+            OR name = 'The Legend of Zelda - Four Swords Adventures'
+            OR name = 'The Legend of Zelda - The Minish Cap'
+            OR name = 'The Legend of Zelda - Twilight Princess'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
+            OR name = 'The Legend of Zelda - Tri Force Heroes'
         ),
         'enemies/leever.webp'
     ),
@@ -52,18 +53,18 @@ INSERT INTO enemies VALUES
         'Basico',
         (
             SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda'
-            OR name = 'Zelda II: The Adventure of Link'
-            OR name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Links Awakening'
-            OR name = 'The Legend of Zelda: Ocarina of Time'
-            OR name = 'The Legend of Zelda: Oracle of Ages'
-            OR name = 'The Legend of Zelda: Oracle of Seasons'
-            OR name = 'The Legend of Zelda: Four Swords'
-            OR name = 'The Legend of Zelda: The Wind Waker'
-            OR name = 'The Legend of Zelda: The Minish Cap'
-            OR name = 'The Legend of Zelda: Skyward Sword'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
-            OR name = 'The Legend of Zelda: Breath of the Wild'
+            OR name = 'Zelda II - The Adventure of Link'
+            OR name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Links Awakening'
+            OR name = 'The Legend of Zelda - Ocarina of Time'
+            OR name = 'The Legend of Zelda - Oracle of Ages'
+            OR name = 'The Legend of Zelda - Oracle of Seasons'
+            OR name = 'The Legend of Zelda - Four Swords'
+            OR name = 'The Legend of Zelda - The Wind Waker'
+            OR name = 'The Legend of Zelda - The Minish Cap'
+            OR name = 'The Legend of Zelda - Skyward Sword'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
+            OR name = 'The Legend of Zelda - Breath of the Wild'
         ),
         'enemies/moblin.webp'
     ),
@@ -92,7 +93,7 @@ INSERT INTO enemies VALUES
         DEFAULT,
         'Bits',
         'Basico',
-        (SELECT array_agg(id) FROM games WHERE name = 'Zelda II: The Adventure of Link'),
+        (SELECT array_agg(id) FROM games WHERE name = 'Zelda II - The Adventure of Link'),
         'enemies/bits.webp'
     ),
     (
@@ -101,21 +102,21 @@ INSERT INTO enemies VALUES
         'Basico',
         (
             SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda'
-            OR name = 'Zelda II: The Adventure of Link'
-            OR name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Links Awakening'
-            OR name = 'The Legend of Zelda: Ocarina of Time'
-            OR name = 'The Legend of Zelda: Oracle of Ages'
-            OR name = 'The Legend of Zelda: Oracle of Seasons'
-            OR name = 'The Legend of Zelda: Four Swords'
-            OR name = 'The Legend of Zelda: The Wind Waker'
-            OR name = 'The Legend of Zelda: Four Swords Adventures'
-            OR name = 'The Legend of Zelda: The Minish Cap'
-            OR name = 'The Legend of Zelda: Twilight Princess'
-            OR name = 'The Legend of Zelda: Phantom Hourglass'
-            OR name = 'The Legend of Zelda: Spirit Tracks'
-            OR name = 'The Legend of Zelda: Skyward Sword'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
+            OR name = 'Zelda II - The Adventure of Link'
+            OR name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Links Awakening'
+            OR name = 'The Legend of Zelda - Ocarina of Time'
+            OR name = 'The Legend of Zelda - Oracle of Ages'
+            OR name = 'The Legend of Zelda - Oracle of Seasons'
+            OR name = 'The Legend of Zelda - Four Swords'
+            OR name = 'The Legend of Zelda - The Wind Waker'
+            OR name = 'The Legend of Zelda - Four Swords Adventures'
+            OR name = 'The Legend of Zelda - The Minish Cap'
+            OR name = 'The Legend of Zelda - Twilight Princess'
+            OR name = 'The Legend of Zelda - Phantom Hourglass'
+            OR name = 'The Legend of Zelda - Spirit Tracks'
+            OR name = 'The Legend of Zelda - Skyward Sword'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
         ),
         'enemies/stalfos.webp'
     ),
@@ -123,7 +124,7 @@ INSERT INTO enemies VALUES
         DEFAULT,
         'Daira',
         'Basico',
-        (SELECT array_agg(id) FROM games WHERE name = 'Zelda II: The Adventure of Link'),
+        (SELECT array_agg(id) FROM games WHERE name = 'Zelda II - The Adventure of Link'),
         'enemies/daira.webp'
     ),
     (
@@ -131,14 +132,14 @@ INSERT INTO enemies VALUES
         'Link Oscuro',
         'Jefe',
         (
-            SELECT array_agg(id) FROM games WHERE name = 'Zelda II: The Adventure of Link'
-            OR name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Ocarina of Time'
-            OR name = 'The Legend of Zelda: Oracle of Ages'
-            OR name = 'The Legend of Zelda: Four Swords Adventures'
-            OR name = 'The Legend of Zelda: Spirit Tracks'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
-            OR name = 'The Legend of Zelda: Tri Force Heroes'
+            SELECT array_agg(id) FROM games WHERE name = 'Zelda II - The Adventure of Link'
+            OR name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Ocarina of Time'
+            OR name = 'The Legend of Zelda - Oracle of Ages'
+            OR name = 'The Legend of Zelda - Four Swords Adventures'
+            OR name = 'The Legend of Zelda - Spirit Tracks'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
+            OR name = 'The Legend of Zelda - Tri Force Heroes'
         ),
         'enemies/link_oscuro.webp'
     ),
@@ -146,7 +147,7 @@ INSERT INTO enemies VALUES
         DEFAULT,
         'Volvagia',
         'Jefe',
-        (SELECT array_agg(id) FROM games WHERE name = 'Zelda II: The Adventure of Link'),
+        (SELECT array_agg(id) FROM games WHERE name = 'Zelda II - The Adventure of Link'),
         'enemies/volvagia_(zelda2).webp'
     ),
     (
@@ -155,19 +156,19 @@ INSERT INTO enemies VALUES
         'Basico',
         (
             SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda'
-            OR name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Links Awakening'
-            OR name = 'The Legend of Zelda: Ocarina of Time'
-            OR name = 'The Legend of Zelda: Majoras Mask'
-            OR name = 'The Legend of Zelda: Oracle of Ages'
-            OR name = 'The Legend of Zelda: Oracle of Seasons'
-            OR name = 'The Legend of Zelda: Four Swords'
-            OR name = 'The Legend of Zelda: Four Swords Adventures'
-            OR name = 'The Legend of Zelda: The Minish Cap'
-            OR name = 'The Legend of Zelda: Twilight Princess'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
-            OR name = 'The Legend of Zelda: Tri Force Heroes'
-            OR name = 'The Legend of Zelda: Tears of the Kingdom'
+            OR name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Links Awakening'
+            OR name = 'The Legend of Zelda - Ocarina of Time'
+            OR name = 'The Legend of Zelda - Majoras Mask'
+            OR name = 'The Legend of Zelda - Oracle of Ages'
+            OR name = 'The Legend of Zelda - Oracle of Seasons'
+            OR name = 'The Legend of Zelda - Four Swords'
+            OR name = 'The Legend of Zelda - Four Swords Adventures'
+            OR name = 'The Legend of Zelda - The Minish Cap'
+            OR name = 'The Legend of Zelda - Twilight Princess'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
+            OR name = 'The Legend of Zelda - Tri Force Heroes'
+            OR name = 'The Legend of Zelda - Tears of the Kingdom'
         ),
         'enemies/gibdo.webp'
     ),
@@ -176,13 +177,13 @@ INSERT INTO enemies VALUES
         'Hinox',
         'Basico',
         (
-            SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Links Awakening'
-            OR name = 'The Legend of Zelda: Four Swords Adventures'
-            OR name = 'The Legend of Zelda: Phantom Hourglass'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
-            OR name = 'The Legend of Zelda: Tri Force Heroes'
-            OR name = 'The Legend of Zelda: Breath of the Wild'
+            SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Links Awakening'
+            OR name = 'The Legend of Zelda - Four Swords Adventures'
+            OR name = 'The Legend of Zelda - Phantom Hourglass'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
+            OR name = 'The Legend of Zelda - Tri Force Heroes'
+            OR name = 'The Legend of Zelda - Breath of the Wild'
         ),
         'enemies/hinox.webp'
     ),
@@ -191,15 +192,15 @@ INSERT INTO enemies VALUES
         'Poe',
         'Basico',
         (
-            SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Ocarina of Time'
-            OR name = 'The Legend of Zelda: Majoras Mask'
-            OR name = 'The Legend of Zelda: Oracle of Ages'
-            OR name = 'The Legend of Zelda: Oracle of Seasons'
-            OR name = 'The Legend of Zelda: The Wind Waker'
-            OR name = 'The Legend of Zelda: Twilight Princess'
-            OR name = 'The Legend of Zelda: Phantom Hourglass'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
+            SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Ocarina of Time'
+            OR name = 'The Legend of Zelda - Majoras Mask'
+            OR name = 'The Legend of Zelda - Oracle of Ages'
+            OR name = 'The Legend of Zelda - Oracle of Seasons'
+            OR name = 'The Legend of Zelda - The Wind Waker'
+            OR name = 'The Legend of Zelda - Twilight Princess'
+            OR name = 'The Legend of Zelda - Phantom Hourglass'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
         ),
         'enemies/poe.webp'
     ),
@@ -209,23 +210,23 @@ INSERT INTO enemies VALUES
         'Basico',
         (
             SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda'
-            OR name = 'The Legend of Zelda: A Link to the Past'
-            OR name = 'The Legend of Zelda: Links Awakening'
-            OR name = 'The Legend of Zelda: Ocarina of Time'
-            OR name = 'The Legend of Zelda: Majoras Mask'
-            OR name = 'The Legend of Zelda: Oracle of Ages'
-            OR name = 'The Legend of Zelda: Oracle of Seasons'
-            OR name = 'The Legend of Zelda: Four Swords'
-            OR name = 'The Legend of Zelda: The Wind Waker'
-            OR name = 'The Legend of Zelda: Four Swords Adventures'
-            OR name = 'The Legend of Zelda: The Minish Cap'
-            OR name = 'The Legend of Zelda: Twilight Princess'
-            OR name = 'The Legend of Zelda: Phantom Hourglass'
-            OR name = 'The Legend of Zelda: Spirit Tracks'
-            OR name = 'The Legend of Zelda: Skyward Sword'
-            OR name = 'The Legend of Zelda: A Link Between Worlds'
-            OR name = 'The Legend of Zelda: Tri Force Heroes'
-            OR name = 'The Legend of Zelda: Breath of the Wild'
+            OR name = 'The Legend of Zelda - A Link to the Past'
+            OR name = 'The Legend of Zelda - Links Awakening'
+            OR name = 'The Legend of Zelda - Ocarina of Time'
+            OR name = 'The Legend of Zelda - Majoras Mask'
+            OR name = 'The Legend of Zelda - Oracle of Ages'
+            OR name = 'The Legend of Zelda - Oracle of Seasons'
+            OR name = 'The Legend of Zelda - Four Swords'
+            OR name = 'The Legend of Zelda - The Wind Waker'
+            OR name = 'The Legend of Zelda - Four Swords Adventures'
+            OR name = 'The Legend of Zelda - The Minish Cap'
+            OR name = 'The Legend of Zelda - Twilight Princess'
+            OR name = 'The Legend of Zelda - Phantom Hourglass'
+            OR name = 'The Legend of Zelda - Spirit Tracks'
+            OR name = 'The Legend of Zelda - Skyward Sword'
+            OR name = 'The Legend of Zelda - A Link Between Worlds'
+            OR name = 'The Legend of Zelda - Tri Force Heroes'
+            OR name = 'The Legend of Zelda - Breath of the Wild'
         ),
         'enemies/keese.webp'
     ),
@@ -234,7 +235,7 @@ INSERT INTO enemies VALUES
         'Ganondorf',
         'Jefe',
         (
-            SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda: Ocarina of Time'
+            SELECT array_agg(id) FROM games WHERE name = 'The Legend of Zelda - Ocarina of Time'
         ),
         'enemies/ganondorf.webp'
     );
