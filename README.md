@@ -16,21 +16,42 @@ Objeto **BASE** de respuesta:
         "field": *TEXT*,
         "value": *TEXT | UUID*
     },
-    "data": *ARRAY | OBJECT*
+    "data": *ARRAY | OBJECT | NULL*
+}
+```
+
+**Ejemplo:**
+
+`GET` - `/games/name/ocarina`
+
+```json
+{
+    "tableName": *TEXT*,
+    "query": {
+        "field": *TEXT*,
+        "value": *TEXT | UUID*
+    },
+    "data": [
+        {
+            "id": "1ea680ad-a109-4317-aaa8-cb563d29fa88",
+            "name": "The Legend of Zelda - Ocarina of Time",
+            "console_id": "be961300-529a-492f-b2dd-6e5deff974ea",
+            "release_date": "1998-11-23T04:00:00.000Z",
+            "description": "The Legend of Zelda: Ocarina of Time (ぜるだ の でんせつ とき の おかりな, Zeruda no Densetsu Toki no Okarina) es la...",
+            "img": "games/ocarina.webp"
+        }
+    ]
 }
 ```
 
 
-<details>
-<summary><strong>Recursos</strong></summary>
+### Recursos
 
 - **[Personajes](#personajes)**
 - **[Juegos](#juegos)**
 - **[Consolas]**
 - **[Razas]**
 - **[Enemigos]**
-
-</details>
 
 ---
 
