@@ -71,7 +71,7 @@ Esquema Básico:
 
 Endopoints:
 
-- `GET` - `/characters/` : Todos los personajes
+- `GET` - `/characters/` : Obtener todos los personajes
 
     <details>
     <summary><strong>Ejemplo:</strong></summary>
@@ -100,7 +100,8 @@ Endopoints:
             ],
             "description": "Link (リンク, Rinku) es el nombre del protagonista de The Legend of Zelda. Es el Héroe Elegido por...",
             "img": "characters/link.webp"
-        }
+        },
+        ...
     ]
     ```
 </details>
@@ -258,3 +259,56 @@ Esquema Básico:
     "img": /* TEXT */
 }
 ```
+
+Endopoints:
+
+- `GET` - `/games/` : Obtener todos los juegos
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    ```json
+    [
+        {
+            "id": "54c0e405-69dc-4a19-b731-df697bbfad0f",
+            "name": "The Legend of Zelda",
+            "console_id": "7a2d73e2-02e2-484e-9e87-514009e289b3",
+            "release_date": "1987-08-22T04:00:00.000Z",
+            "description": "The Legend of Zelda (ゼルダの伝説, Zeruda no Densetsu), también conocido como...",
+            "img": "games/zelda1.webp"
+        },
+        {
+            "id": "1976757b-405b-4d29-b592-086cb6857ea6",
+            "name": "Zelda II - The Adventure of Link",
+            "console_id": "7a2d73e2-02e2-484e-9e87-514009e289b3",
+            "release_date": "1988-12-01T04:00:00.000Z",
+            "description": "Zelda II: The Adventure of Link (リンクの冒険, Rinku no Bōken), es la segunda...",
+            "img": "games/zelda2.webp"
+        },
+        ...
+    ]
+    ```
+
+</details>
+
+- `GET` - `/games/{id}` : Obtener **un juego** por ID
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/games/1ea680ad-a109-4317-aaa8-cb563d29fa88`    
+
+    ```json
+    {
+        "id": "1ea680ad-a109-4317-aaa8-cb563d29fa88",
+        "name": "The Legend of Zelda - Ocarina of Time",
+        "console_id": "be961300-529a-492f-b2dd-6e5deff974ea",
+        "release_date": "1998-11-23T04:00:00.000Z",
+        "description": "The Legend of Zelda: Ocarina of Time (ぜるだ の でんせつ とき の おかりな, Zeruda no Densetsu Toki no Okarina) es la quinta entrega de saga...",
+        "img": "games/ocarina.webp"
+    }
+    ```
+
+</details>
+
+- `GET` - `/games/name/{name}` : Obtener **varios juegos** por nombre
