@@ -9,14 +9,14 @@ Esta una **API REST** sobre la saga **The Legend of Zelda**, creada para el clie
 ## Uso
 Objeto **BASE** de respuesta:
 
-```
+```json
 {
-    "tableName": *TEXT*,
+    "tableName": /* TEXT */,
     "query": {
-        "field": *TEXT*,
-        "value": *TEXT | UUID*
+        "field": /* TEXT */,
+        "value": /* TEXT | UUID */
     },
-    "data": *ARRAY | OBJECT | NULL*
+    "data": /* ARRAY | OBJECT | NULL */
 }
 ```
 
@@ -26,10 +26,10 @@ Objeto **BASE** de respuesta:
 
 ```json
 {
-    "tableName": *TEXT*,
+    "tableName": /* TEXT */,
     "query": {
-        "field": *TEXT*,
-        "value": *TEXT | UUID*
+        "field": /* TEXT */,
+        "value": /* TEXT | UUID */
     },
     "data": [
         {
@@ -60,12 +60,12 @@ Objeto **BASE** de respuesta:
 Esquema Básico:
 ```json
 {
-    "id": *UUID*,
-    "name": *TEXT*,
-    "race_id": *UUID*,
-    "games_id": *UUID[]*,
-    "description": *TEXT*,
-    "img": *TEXT*
+    "id": /* UUID */,
+    "name": /* TEXT */,
+    "race_id": /* UUID */,
+    "games_id": /* UUID[] */,
+    "description": /* TEXT */,
+    "img": /* TEXT */
 }
 ```
 
@@ -241,3 +241,20 @@ Endopoints:
     ]
     ```
 </details>
+
+---
+
+### Juegos
+
+Esquema Básico:
+
+```json
+{
+    "id": /* UUID */,
+    "name": /* TEXT */,
+    "console_id": /* UUID */,
+    "release_date": /* DATE */,
+    "description": /* TEXT */,
+    "img": /* TEXT */
+}
+```
