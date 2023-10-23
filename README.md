@@ -69,9 +69,9 @@ Esquema Básico:
 }
 ```
 
-Endopoints:
+Endpoints:
 
-- `GET` - `/characters/` : Obtener todos los personajes
+- `GET` - `/characters/` : Obtener **todos los personajes**
 
     <details>
     <summary><strong>Ejemplo:</strong></summary>
@@ -260,9 +260,9 @@ Esquema Básico:
 }
 ```
 
-Endopoints:
+Endpoints:
 
-- `GET` - `/games/` : Obtener todos los juegos
+- `GET` - `/games/` : Obtener **todos los juegos**
 
     <details>
     <summary><strong>Ejemplo:</strong></summary>
@@ -312,3 +312,145 @@ Endopoints:
 </details>
 
 - `GET` - `/games/name/{name}` : Obtener **varios juegos** por nombre
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/games/name/ocarina`
+
+    ```json
+    [
+        {
+            "id": "1ea680ad-a109-4317-aaa8-cb563d29fa88",
+            "name": "The Legend of Zelda - Ocarina of Time",
+            "console_id": "be961300-529a-492f-b2dd-6e5deff974ea",
+            "release_date": "1998-11-23T04:00:00.000Z",
+            "description": "The Legend of Zelda: Ocarina of Time (ぜるだ の でんせつ とき の おかりな, Zeruda no Densetsu Toki no Okarina) es la...",
+            "img": "games/ocarina.webp"
+        }
+    ]
+    ```
+</details>
+
+- `GET` - `/games/console/{consoleID}` : Obtener **varios juegos** por consola
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/games/console/4e0b9ba2-8c26-4fea-b187-0657eb98b2fd`
+
+    ```json
+    [
+        {
+            "id": "bf7bd1ae-a6d8-4438-a41b-b3ed0294ed92",
+            "name": "The Legend of Zelda - Breath of the Wild",
+            "console_id": "4e0b9ba2-8c26-4fea-b187-0657eb98b2fd",
+            "release_date": "2017-03-03T04:00:00.000Z",
+            "description": "The Legend of Zelda: Breath of the Wild ((ゼルダの伝説 ブレス オブ ザ ワイルド, Zeruda no Densetsu: Buresu obu za Wairudo en japonés)) es el...",
+            "img": "games/breath_of_the_wild.webp"
+        },
+        {
+            "id": "526acc74-fa42-4b70-83ae-a44a9dc60bc7",
+            "name": "The Legend of Zelda - Tears of the Kingdom",
+            "console_id": "4e0b9ba2-8c26-4fea-b187-0657eb98b2fd",
+            "release_date": "2023-05-12T04:00:00.000Z",
+            "description": "The Legend of Zelda: Tears of the Kingdom (ゼルダの伝説 ティアーズ オブ ザ キングダム, Zeruda no Densetsu Tiāzu obu za Kingudamu)...",
+            "img": "games/tears_of_the_kingdom.webp"
+        }
+    ]
+    ```
+</details>
+
+---
+
+### Consolas
+
+Esquema Básico:
+
+```json
+{
+    "id": /* UUID */,
+    "name": /* TEXT */,
+    "release_date": /* DATE */,
+    "games_id": /* UUID[] */,
+    "img": /* TEXT */
+}
+```
+
+Endpoints:
+
+- `GET` - `/consoles/` : Obtener **todas las consolas**
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    ```json
+    [
+        {
+            "id": "0bf87ff7-3739-4323-b330-918d3b402498",
+            "name": "Nintendo Entertainment System (NES)",
+            "release_date": "1985-11-18T04:00:00.000Z",
+            "games_id": [
+                "a49ca111-cfe1-43a5-bdc7-046df9fbfb00",
+                "6a25c091-cd12-46e0-9a72-a65f2aa39458"
+            ],
+            "img": "consoles/nes.webp"
+        },
+        {
+            "id": "c8b06553-194a-4ef3-ac9e-8e983595bce0",
+            "name": "Super Nintendo Entertainment System (SNES)",
+            "release_date": "1991-08-13T04:00:00.000Z",
+            "games_id": [
+                "c1847bab-a0d9-4e90-b92c-03e18bcf3f54"
+            ],
+            "img": "consoles/snes.webp"
+        }
+    ]
+    ```
+
+</details>
+
+- `GET` - `/consoles/{id}` : Obtener **una consola** por ID
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/consoles/3c87a279-d9b6-478b-92d3-50cb5ea3165b`
+
+    ```json
+    {
+        "id": "3c87a279-d9b6-478b-92d3-50cb5ea3165b",
+        "name": "Nintendo GameCube",
+        "release_date": "2001-11-18T04:00:00.000Z",
+        "games_id": [
+            "ece9d029-876b-4d1c-b0e7-54e835756684",
+            "25578af4-b2ac-4d2e-811b-60237b94d360",
+            "66e809ea-cfbd-4f4f-92bf-dabf9979ff63"
+        ],
+        "img": "consoles/gamecube.webp"
+    }
+    ```
+
+</details>
+
+- `GET` - `/consoles/game/{gameID}` : Obtener **una consola** por juego
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/consoles/game/c1847bab-a0d9-4e90-b92c-03e18bcf3f54`
+
+    ```json
+    {
+        "id": "c8b06553-194a-4ef3-ac9e-8e983595bce0",
+        "name": "Super Nintendo Entertainment System (SNES)",
+        "release_date": "1991-08-13T04:00:00.000Z",
+        "games_id": [
+            "c1847bab-a0d9-4e90-b92c-03e18bcf3f54"
+        ],
+        "img": "consoles/snes.webp"
+    }
+    ```
+</details>
+
+---
