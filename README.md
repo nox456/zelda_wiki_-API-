@@ -1,9 +1,5 @@
 <h1 align="center">The Hyrule Field API</h1>
 
-<img src="./docs/main.jpg" height="240" width="100%" style="object-fit: cover; border-radius: 5px;">
-
----
-
 Esta una **API REST** sobre la saga **The Legend of Zelda**, creada para el cliente: **[zelda_wiki_CLIENT](https://github.com/nox456/zelda_wiki_CLIENT)** 
 
 ## Uso
@@ -11,12 +7,12 @@ Objeto **BASE** de respuesta:
 
 ```json
 {
-    "tableName": /* TEXT */,
+    "tableName": "TEXT",
     "query": {
-        "field": /* TEXT */,
-        "value": /* TEXT | UUID */
+        "field": "TEXT",
+        "value": "TEXT | NULL"
     },
-    "data": /* ARRAY | OBJECT | NULL */
+    "data": "OBJECT | ARRAY | NULL"
 }
 ```
 
@@ -26,10 +22,10 @@ Objeto **BASE** de respuesta:
 
 ```json
 {
-    "tableName": /* TEXT */,
+    "tableName": "games",
     "query": {
-        "field": /* TEXT */,
-        "value": /* TEXT | UUID */
+        "field": "name",
+        "value": "ocarina"
     },
     "data": [
         {
@@ -60,12 +56,12 @@ Objeto **BASE** de respuesta:
 Esquema Básico:
 ```json
 {
-    "id": /* UUID */,
-    "name": /* TEXT */,
-    "race_id": /* UUID */,
-    "games_id": /* UUID[] */,
-    "description": /* TEXT */,
-    "img": /* TEXT */
+    "id": "UUID",
+    "name": "TEXT",
+    "race_id": "UUID",
+    "games_id": "UUID[]",
+    "description": "TEXT",
+    "img": "TEXT"
 }
 ```
 
@@ -251,12 +247,12 @@ Esquema Básico:
 
 ```json
 {
-    "id": /* UUID */,
-    "name": /* TEXT */,
-    "console_id": /* UUID */,
-    "release_date": /* DATE */,
-    "description": /* TEXT */,
-    "img": /* TEXT */
+    "id": "UUID",
+    "name": "TEXT",
+    "console_id": "UUID",
+    "release_date": "DATE",
+    "description": "TEXT",
+    "img": "TEXT"
 }
 ```
 
@@ -369,11 +365,11 @@ Esquema Básico:
 
 ```json
 {
-    "id": /* UUID */,
-    "name": /* TEXT */,
-    "release_date": /* DATE */,
-    "games_id": /* UUID[] */,
-    "img": /* TEXT */
+    "id": "UUID",
+    "name": "TEXT",
+    "release_date": "DATE",
+    "games_id": "UUID[]",
+    "img": "TEXT"
 }
 ```
 
@@ -461,11 +457,11 @@ Esquema Básico:
 
 ```json
 {
-    "id": /* UUID */,
-    "name": /* TEXT */,
-    "games_id": /* UUID[] */,
-    "description": /* TEXT */,
-    "img": /* TEXT */
+    "id": "UUID",
+    "name": "TEXT",
+    "games_id": "UUID[]",
+    "description": "TEXT",
+    "img": "TEXT"
 }
 ```
 
