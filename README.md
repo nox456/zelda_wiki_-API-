@@ -49,7 +49,7 @@ Objeto **BASE** de respuesta:
 
 - **[Personajes](#personajes)**
 - **[Juegos](#juegos)**
-- **[Consolas]**
+- **[Consolas](#consolas)**
 - **[Razas]**
 - **[Enemigos]**
 
@@ -450,6 +450,116 @@ Endpoints:
         ],
         "img": "consoles/snes.webp"
     }
+    ```
+</details>
+
+---
+
+### Razas
+
+Esquema Básico:
+
+```json
+{
+    "id": /* UUID */,
+    "name": /* TEXT */,
+    "games_id": /* UUID[] */,
+    "description": /* TEXT */,
+    "img": /* TEXT */
+}
+```
+
+Endpoints:
+
+- `GET` - `/races/` - Obtener **todas las razas**
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    ```json
+    [
+        {
+            "id": "de305a29-5e5b-40b1-bbca-59479b9b6f74",
+            "name": "Hyliano",
+            "games_id": [
+                "54c0e405-69dc-4a19-b731-df697bbfad0f",
+                "1976757b-405b-4d29-b592-086cb6857ea6",
+                ...
+            ],
+            "description": "Los Hylianos (ハイリア族, Hairia-zoku), también conocidos como los Hylians, son una...",
+            "img": "races/hyliano.webp"
+        },
+        {
+            "id": "a31ce347-5d14-4e4b-aea4-b60e83ae04b7",
+            "name": "Kokiri",
+            "games_id": [
+                "1ea680ad-a109-4317-aaa8-cb563d29fa88",
+                "30920bf4-0dd8-4829-a0e7-53c0eda0045b"
+            ],
+            "description": "Los Kokiri (コキリ, Kokiri), son una raza que habita aparece en Ocarina of Time y en The Wind Waker. Ellos habitan en el...",
+            "img": "races/kokiri.webp"
+        },
+        ...
+    ]
+    ```
+</details>
+
+- `GET` - `/races/name/{name}` : Obtener **varias razas** por nombre
+    
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/races/name/hylia` 
+
+    ```json
+    [
+        {
+            "id": "de305a29-5e5b-40b1-bbca-59479b9b6f74",
+            "name": "Hyliano",
+            "games_id": [
+                "54c0e405-69dc-4a19-b731-df697bbfad0f",
+                "1976757b-405b-4d29-b592-086cb6857ea6",
+                ...
+            ],
+            "description": "Los Hylianos (ハイリア族, Hairia-zoku), también conocidos como los Hylians...",
+            "img": "races/hyliano.webp"
+        }
+    ]
+    ```
+</details>
+
+- `GET` - `/races/game/{gameID}` : Obtener **varias razas** por juego
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/races/game/a49ca111-cfe1-43a5-bdc7-046df9fbfb00`
+
+    ```json
+    [
+        {
+            "id": "4afc7454-2be2-44b3-8f91-6c93c20bd82d",
+            "name": "Hyliano",
+            "games_id": [
+                "a49ca111-cfe1-43a5-bdc7-046df9fbfb00",
+                "6a25c091-cd12-46e0-9a72-a65f2aa39458",
+                ...
+            ],
+            "description": "Los Hylianos (ハイリア族, Hairia-zoku), también conocidos como los Hylians, son una raza de...",
+            "img": "races/hyliano.webp"
+        },
+        {
+            "id": "40535a79-fd0c-4077-89f4-723ee8cc0fca",
+            "name": "Hada",
+            "games_id": [
+                "a49ca111-cfe1-43a5-bdc7-046df9fbfb00",
+                "6a25c091-cd12-46e0-9a72-a65f2aa39458",
+                ...
+            ],
+            "description": "Las Hadas (妖精, Yōsei) constituyen un elemento habitual en la saga The Legend of Zelda. Son un tipo de...",
+            "img": "races/hada.webp"
+        }
+    ]
     ```
 </details>
 
