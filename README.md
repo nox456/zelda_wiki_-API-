@@ -500,6 +500,28 @@ Endpoints:
     ```
 </details>
 
+- `GET` - `/races/{id}` : Obtener **una raza** por id
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/races/40535a79-fd0c-4077-89f4-723ee8cc0fca`
+
+    ```json
+    {
+        "id": "40535a79-fd0c-4077-89f4-723ee8cc0fca",
+        "name": "Hada",
+        "games_id": [
+            "a49ca111-cfe1-43a5-bdc7-046df9fbfb00",
+            "6a25c091-cd12-46e0-9a72-a65f2aa39458",
+            ...
+        ],
+        "description": "Las Hadas (妖精, Yōsei) constituyen un elemento habitual en la saga The Legend of Zelda. Son un tipo de...",
+        "img": "races/hada.webp"
+    }
+    ```
+</details>
+
 - `GET` - `/races/name/{name}` : Obtener **varias razas** por nombre
     
     <details>
