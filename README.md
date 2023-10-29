@@ -1,5 +1,9 @@
 <h1 align="center">The Hyrule Field API</h1>
 
+<img src="./docs/screenshot1.png">
+
+---
+
 Esta una **API REST** sobre la saga **The Legend of Zelda**, creada para el cliente: **[zelda_wiki_CLIENT](https://github.com/nox456/zelda_wiki_CLIENT)** 
 
 ## Uso
@@ -47,7 +51,7 @@ Objeto **BASE** de respuesta:
 - **[Juegos](#juegos)**
 - **[Consolas](#consolas)**
 - **[Razas](#razas)**
-- **[Enemigos]**
+- **[Enemigos](#enemigos)**
 
 ---
 
