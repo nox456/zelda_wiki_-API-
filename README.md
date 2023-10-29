@@ -46,7 +46,7 @@ Objeto **BASE** de respuesta:
 - **[Personajes](#personajes)**
 - **[Juegos](#juegos)**
 - **[Consolas](#consolas)**
-- **[Razas]**
+- **[Razas](#razas)**
 - **[Enemigos]**
 
 ---
@@ -555,6 +555,174 @@ Endpoints:
             "description": "Las Hadas (妖精, Yōsei) constituyen un elemento habitual en la saga The Legend of Zelda. Son un tipo de...",
             "img": "races/hada.webp"
         }
+    ]
+    ```
+</details>
+
+---
+
+### Enemigos
+
+Esquema Básico:
+
+```json
+{
+    "id": "UUID",
+    "name": "TEXT",
+    "category": "TEXT",
+    "games_id": "UUID[]",
+    "img": "TEXT"
+}
+```
+
+Endpoints:
+
+- `GET` - `/enemies/` : Obtener **todos los enemigos**
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    ```json
+    [
+        {
+            "id": "d0f63188-9684-4d2f-9b0a-a1615e2d7c34",
+            "name": "Octorok",
+            "category": "Basico",
+            "games_id": [
+                "54c0e405-69dc-4a19-b731-df697bbfad0f",
+                "1976757b-405b-4d29-b592-086cb6857ea6",
+                "..."
+            ],
+            "img": "enemies/octorok.webp"
+        },
+        {
+            "id": "c02c53fc-e932-4aff-b048-d0eac088e6af",
+            "name": "Leever",
+            "category": "Basico",
+            "games_id": [
+                "54c0e405-69dc-4a19-b731-df697bbfad0f",
+                "1976757b-405b-4d29-b592-086cb6857ea6",
+                "..."
+            ],
+            "img": "enemies/leever.webp"
+        }
+        "..."
+    ]
+    ```
+</details>
+
+- `GET` - `/enemies/name/{name}` : Obtener **varios enemigos** por nombre
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/enemies/name/stalfo`
+
+    ```json
+    [
+        {
+            "id": "4f7b5568-57e2-4699-87e3-38b4e6794558",
+            "name": "Stalfos",
+            "category": "Basico",
+            "games_id": [
+                "54c0e405-69dc-4a19-b731-df697bbfad0f",
+                "1976757b-405b-4d29-b592-086cb6857ea6",
+                "..."
+            ],
+            "img": "enemies/stalfos.webp"
+        }
+    ]
+    ```
+</details>
+
+- `GET` - `/enemies/{id}` : Obtener **un enemigo** por id
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/enemies/2de6e55b-38be-45bd-84c6-2ff2523c2867`
+
+    ```json
+    {
+        "id": "2de6e55b-38be-45bd-84c6-2ff2523c2867",
+        "name": "Moblin",
+        "category": "Basico",
+        "games_id": [
+            "54c0e405-69dc-4a19-b731-df697bbfad0f",
+            "1976757b-405b-4d29-b592-086cb6857ea6",
+            "..."
+        ],
+        "img": "enemies/moblin.webp"
+    }
+    ```
+</details>
+
+- `GET` - `/enemies/game/{gameID}` : Obtener **varios enemigos** por juego
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/enemies/game/a49ca111-cfe1-43a5-bdc7-046df9fbfb00`
+
+    ```json
+    [
+        {
+            "id": "1067a89f-6d64-4a3e-8300-839a1132bdb0",
+            "name": "Stalfos",
+            "category": "Basico",
+            "games_id": [
+                "a49ca111-cfe1-43a5-bdc7-046df9fbfb00",
+                "6a25c091-cd12-46e0-9a72-a65f2aa39458",
+                "..."
+            ],
+            "img": "enemies/stalfos.webp"
+        },
+        {
+            "id": "1d43769a-78e2-4a2c-9568-2fff36f1f2d1",
+            "name": "Gibdo",
+            "category": "Basico",
+            "games_id": [
+                "a49ca111-cfe1-43a5-bdc7-046df9fbfb00",
+                "c1847bab-a0d9-4e90-b92c-03e18bcf3f54",
+                "..."
+            ],
+            "img": "enemies/gibdo.webp"
+        },
+        "..."
+    ]
+    ```
+</details>
+
+- `GET` - `/enemies/category/{category}` - Obtener **varios enemigos** por categoria
+
+    <details>
+    <summary><strong>Ejemplo:</strong></summary>
+
+    `/enemies/category/Jefe`
+
+    ```json
+    [
+        {
+            "id": "d8f9be4e-5544-4047-bff1-8d3eb221cab0",
+            "name": "Link Oscuro",
+            "category": "Jefe",
+            "games_id": [
+                "6a25c091-cd12-46e0-9a72-a65f2aa39458",
+                "c1847bab-a0d9-4e90-b92c-03e18bcf3f54",
+                "..."
+            ],
+            "img": "enemies/link_oscuro.webp"
+        },
+        {
+            "id": "b47e35f3-7ae4-48f9-be83-5cdba69f636c",
+            "name": "Volvagia",
+            "category": "Jefe",
+            "games_id": [
+                "6a25c091-cd12-46e0-9a72-a65f2aa39458"
+            ],
+            "img": "enemies/volvagia_(zelda2).webp"
+        },
+        "..."
     ]
     ```
 </details>
