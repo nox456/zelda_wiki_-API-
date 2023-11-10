@@ -1,6 +1,6 @@
 import db from "../database/connection.js";
 
-const tableName = "character";
+const tableName = "characters";
 
 export default class Character {
     static async getAll() {
