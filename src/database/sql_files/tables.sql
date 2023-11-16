@@ -33,5 +33,6 @@ CREATE TABLE consoles (
     name TEXT NOT NULL,
     release_date DATE NOT NULL,
     games_id UUID[],
+    description TEXT NOT NULL,
     img TEXT NOT NULL DEFAULT 'No Photo'
 );
