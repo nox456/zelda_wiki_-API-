@@ -24,7 +24,7 @@ export const getEnemieById = async (req, res) => {
         return serverHandler(error, res);
     }
     if (result.data) {
-        res.json(result.data);
+        res.json(result);
     } else {
         return notFoundHandler("Enemigo no encontrado!", result, res);
     }
@@ -39,7 +39,7 @@ export const getEnemieByGame = async (req, res) => {
         return serverHandler(error, res);
     }
     if (result.data.length > 0) {
-        res.json(result.data);
+        res.json(result);
     } else {
         return notFoundHandler("Enemigos no encontrados!", result, res);
     }
@@ -54,7 +54,7 @@ export const getEnemiesByCategory = async (req, res) => {
         return serverHandler(error, res);
     }
     if (result.data.length > 0) {
-        res.json(result.data);
+        res.json(result);
     } else {
         return notFoundHandler("Enemigos no encontrados!", result, res);
     }
@@ -69,7 +69,7 @@ export const getEnemiesByName = async (req, res) => {
         return serverHandler(error, res);
     }
     if (result.data.length > 0) {
-        res.json(result.data);
+        res.json(result);
     } else {
         return notFoundHandler("Enemigos no encontrados!", result, res);
     }
