@@ -26,6 +26,7 @@ CREATE TABLE enemies (
     name TEXT NOT NULL,
     category TEXT NOT NULL,
     games_id UUID[] NOT NULL,
+    description TEXT NOT NULL,
     img TEXT NOT NULL DEFAULT 'No Photo'
 );
 CREATE TABLE consoles (
@@ -33,5 +34,6 @@ CREATE TABLE consoles (
     name TEXT NOT NULL,
     release_date DATE NOT NULL,
     games_id UUID[],
+    description TEXT NOT NULL,
     img TEXT NOT NULL DEFAULT 'No Photo'
 );
