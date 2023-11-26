@@ -39,7 +39,7 @@ export default class Race {
             data: race
         }
     }
-    static async getByGameId(game_id) {
+    static async getByGame(game_id) {
         const { rows } = await db.query("SELECT * FROM races")
         const race = rows.filter((rc) => {
             return rc.games_id.includes(game_id)

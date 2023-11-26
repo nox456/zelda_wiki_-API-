@@ -1,4 +1,5 @@
 import Enemie from "../models/enemie.js";
+import Game from "../models/game.js"
 import { notFoundHandler, serverHandler } from "../lib/errorsHandlers.js";
 
 export const getEnemies = async (req, res) => {
@@ -30,7 +31,7 @@ export const getEnemieById = async (req, res) => {
     }
 };
 
-export const getEnemieByGame = async (req, res) => {
+export const getEnemieByGameId = async (req, res) => {
     const { game_id } = req.params;
     let result;
     try {
@@ -44,6 +45,23 @@ export const getEnemieByGame = async (req, res) => {
         return notFoundHandler("Enemigos no encontrados!", result, res);
     }
 };
+
+export const getEnemieByGameName = async (req,res) => {
+    const { game_name } = req.params
+    let result1
+    let result2
+    try {
+        result1 = await Game.getByName(game_name)
+        result2 = await Enemie.getByGame(result1.data[0].id)
+    } catch (error) {
+        return serverHandler(error,res) 
+    }
+    if (result2.data.length > 0) {
+        res.json(result2)
+    } else {
+        return notFoundHandler("Enemigos no encontrados!", result2, res)
+    }
+}
 
 export const getEnemiesByCategory = async (req, res) => {
     const { category } = req.params;
