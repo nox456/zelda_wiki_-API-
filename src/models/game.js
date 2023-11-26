@@ -41,7 +41,7 @@ export default class Game {
             data: game
         }
     }
-    static async getByConsoleId(console_id) {
+    static async getByConsole(console_id) {
         const { rows } = await db.query("SELECT * FROM games WHERE console_id = $1", [console_id])
         return {
             tableName,

@@ -1,4 +1,5 @@
 import Game from "../models/game.js";
+import Console from "../models/console.js"
 import { notFoundHandler, serverHandler } from "../lib/errorsHandlers.js";
 
 export const getGames = async (req, res) => {
@@ -45,7 +46,7 @@ export const getGameByConsoleId = async (req, res) => {
     const { console_id } = req.params;
     let result;
     try {
-        result = await Game.getByConsoleId(console_id);
+        result = await Game.getByConsole(console_id);
     } catch (error) {
         return serverHandler(error, res);
     }
@@ -55,3 +56,20 @@ export const getGameByConsoleId = async (req, res) => {
         return notFoundHandler("Juegos no encontrados!", result, res);
     }
 };
+
+export const getGameByConsoleName = async (req,res) => {
+    const { console_name } = req.params
+    let result1
+    let result2
+    try {
+        result1 = await Console.getByName(console_name)
+        result2 = await Game.getByConsole(result1.data[0].id)
+    } catch (error) {
+        return serverHandler(error, res)
+    }
+    if (result2.data.length > 0) {
+        res.json(result2)
+    } else {
+        return notFoundHandler("Juegos no encontrados!", result2, res)
+    }
+}
