@@ -1,6 +1,7 @@
 import { Router } from "express";
 import {
-    getEnemieByGame,
+    getEnemieByGameName,
+    getEnemieByGameId,
     getEnemieById,
     getEnemies,
     getEnemiesByCategory,
@@ -13,7 +14,9 @@ router.get("/", getEnemies);
 
 router.get("/:id", getEnemieById);
 
-router.get("/game/:game_id", getEnemieByGame);
+router.get("/game/id/:game_id", getEnemieByGameId);
+
+router.get("/game/name/:game_name", getEnemieByGameName)
 
 router.get("/category/:category", getEnemiesByCategory);
 
