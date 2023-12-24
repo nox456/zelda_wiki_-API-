@@ -1,5 +1,5 @@
 import Enemie from "../models/enemie.js";
-import Game from "../models/game.js"
+import Game from "../models/game.js";
 import { notFoundHandler, serverHandler } from "../lib/errorsHandlers.js";
 
 export const getEnemies = async (req, res) => {
@@ -46,22 +46,31 @@ export const getEnemieByGameId = async (req, res) => {
     }
 };
 
-export const getEnemieByGameName = async (req,res) => {
-    const { game_name } = req.params
-    let result1
-    let result2
+export const getEnemieByGameName = async (req, res) => {
+    const { game_name } = req.params;
+    let result1;
     try {
-        result1 = await Game.getByName(game_name)
-        result2 = await Enemie.getByGame(result1.data[0].id)
+        result1 = await Game.getByName(game_name);
     } catch (error) {
-        return serverHandler(error,res) 
+        return serverHandler(error, res);
     }
-    if (result2.data.length > 0) {
-        res.json(result2)
+    if (result1.data.length > 0) {
+        let result2;
+        try {
+            result2 = await Enemie.getByGame(result1.data[0].id);
+        } catch (error) {
+            return serverHandler(error, res);
+        }
+        if (result2.data.length > 0) {
+            res.json(result2);
+        } else {
+            return notFoundHandler("Enemigos no encontrados!", result2, res);
+        }
     } else {
-        return notFoundHandler("Enemigos no encontrados!", result2, res)
+        result1.query.field = "game";
+        return notFoundHandler("Enemigos no encontrados!", result1, res);
     }
-}
+};
 
 export const getEnemiesByCategory = async (req, res) => {
     const { category } = req.params;

@@ -1,5 +1,5 @@
 import Game from "../models/game.js";
-import Console from "../models/console.js"
+import Console from "../models/console.js";
 import { notFoundHandler, serverHandler } from "../lib/errorsHandlers.js";
 
 export const getGames = async (req, res) => {
@@ -57,19 +57,28 @@ export const getGameByConsoleId = async (req, res) => {
     }
 };
 
-export const getGameByConsoleName = async (req,res) => {
-    const { console_name } = req.params
-    let result1
-    let result2
+export const getGameByConsoleName = async (req, res) => {
+    const { console_name } = req.params;
+    let result1;
     try {
-        result1 = await Console.getByName(console_name)
-        result2 = await Game.getByConsole(result1.data[0].id)
+        result1 = await Console.getByName(console_name);
     } catch (error) {
-        return serverHandler(error, res)
+        return serverHandler(error, res);
     }
-    if (result2.data.length > 0) {
-        res.json(result2)
+    if (result1.data.length > 0) {
+        let result2;
+        try {
+            result2 = await Game.getByConsole(result1.data[0].id);
+        } catch (error) {
+            return serverHandler(error, res);
+        }
+        if (result2.data.length > 0) {
+            res.json(result2);
+        } else {
+            return notFoundHandler("Juegos no encontrados!", result2, res);
+        }
     } else {
-        return notFoundHandler("Juegos no encontrados!", result2, res)
+        result1.query.field = "console";
+        return notFoundHandler("Juegos no encontrados!", result1, res);
     }
-}
+};
