@@ -159,6 +159,14 @@ INSERT INTO games VALUES
         '12/05/2023',
         'The Legend of Zelda: Tears of the Kingdom (ゼルダの伝説 ティアーズ オブ ザ キングダム, Zeruda no Densetsu Tiāzu obu za Kingudamu) es un videojuego de la saga The Legend of Zelda, desarrollado por Nintendo para su consola Nintendo Switch. Es una secuela del videojuego de 2017 The Legend of Zelda: Breath of the Wild.',
         'games/tears_of_the_kingdom.webp'
+    ),
+    (
+        DEFAULT,
+        'God of War',
+        (SELECT id FROM consoles WHERE name = 'Playstation 3'),
+        '01/01/2007',
+        'wow',
+        'games/gow.webp',
     );
 
 
