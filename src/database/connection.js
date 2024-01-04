@@ -1,5 +1,6 @@
 import pg from "pg";
 import insert_consoles_data from "./data/consoles.js"
+import insert_games_data from "./data/games.js"
 
 const db = new pg.Pool({
     database: process.env.DB_NAME,
@@ -12,3 +13,4 @@ const db = new pg.Pool({
 export default db;
 
 await insert_consoles_data()
+await insert_games_data()
