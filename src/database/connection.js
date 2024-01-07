@@ -2,6 +2,7 @@ import pg from "pg";
 import insert_consoles_data from "./data/consoles.js"
 import insert_games_data from "./data/games.js"
 import insert_races_data from "./data/races.js"
+import insert_characters_data from "./data/characters.js"
 
 const db = new pg.Pool({
     database: process.env.DB_NAME,
@@ -16,3 +17,4 @@ export default db;
 await insert_consoles_data()
 await insert_games_data()
 await insert_races_data()
+await insert_characters_data()
