@@ -9,7 +9,8 @@ export default async function insert_games_data() {
     const json_games_names = Object.values(games).map((game) => game.name);
     const db_games_names = rows.map((game) => game.name);
     if (db_games < json_games) {
-        json_games_names.forEach(async (name, index) => {
+        for (const name of json_games_names) {
+            const index = json_games_names.indexOf(name)
             if (!db_games_names.includes(name)) {
                 const { name, console_name, release_date, description, img } =
                     Object.values(games)[index];
@@ -23,16 +24,16 @@ export default async function insert_games_data() {
                     [name, console_id, release_date, description, img]
                 );
             }
-        });
+        }
     } else if (db_games > json_games) {
-        db_games_names.forEach(async (name) => {
+        for (const name of db_games_names) {
             if (!json_games_names.includes(name)) {
                 await db.query("DELETE FROM games WHERE name = $1", [name]);
             }
-        });
+        }
     }
     const all_consoles = await db.query("SELECT id,games_id FROM consoles");
-    all_consoles.rows.forEach(async (consl) => {
+    for (const consl of all_consoles.rows) {
         const { rows } = await db.query(
             "SELECT id FROM games WHERE console_id = $1",
             [consl.id]
@@ -44,5 +45,5 @@ export default async function insert_games_data() {
                 consl.id,
             ]);
         }
-    });
+    }
 }

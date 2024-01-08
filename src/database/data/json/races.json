@@ -1,13 +1,13 @@
 {
     "hyliano": {
         "name": "Hyliano",
-        "games_id": [""],
+        "games": [""],
         "description": "Los Hylianos (ハイリア族, Hairia-zoku), también conocidos como los Hylians, son una raza de seres humanos recurrente en la saga de Zelda. Es la raza elegida por los dioses, fieles a las Diosas de Oro, la cual fue destinada a cargar con la voluntad de las diosas, cuidando de las otras razas que residen en Hyrule. Es por ésta misma razón que son considerados la raza más sublime y poderosa de todo Hyrule. Descendientes de entre los que vivían con la Diosa Hylia, mucho antes del establecimiento de Hyrule como un reino, son una raza mágica con orejas puntiagudas que han heredado la sangre, los poderes y habilidades de sus antepasados. Los Hylianos más famosos son los muchos héroes y princesas que han marcado la historia de su raza a lo largo de generaciones.",
         "img": "races/hyliano.webp"
     },
     "kokiri": {
         "name": "Kokiri",
-        "games_id": [
+        "games": [
             "The Legend of Zelda - Ocarina of Time",
             "The Legend of Zelda - The Wind Waker"
         ],
@@ -16,7 +16,7 @@
     },
     "gerudo": {
         "name": "Gerudo",
-        "games_id": [
+        "games": [
             "The Legend of Zelda - Ocarina of Time",
             "The Legend of Zelda - Majoras Mask",
             "The Legend of Zelda - Oracle of Ages",
@@ -30,7 +30,7 @@
     },
     "goron": {
         "name": "Goron",
-        "games_id": [
+        "games": [
             "The Legend of Zelda - Majoras Mask",
             "The Legend of Zelda - Oracle of Ages",
             "The Legend of Zelda - Oracle of Seasons",
@@ -48,7 +48,7 @@
     },
     "zora": {
         "name": "Zora",
-        "games_id": [
+        "games": [
             "The Legend of Zelda - Ocarina of Time",
             "The Legend of Zelda - Majoras Mask",
             "The Legend of Zelda - Oracle of Ages",
@@ -61,7 +61,7 @@
     },
     "sheikah": {
         "name": "Sheikah",
-        "games_id": [
+        "games": [
             "The Legend of Zelda",
             "Zelda II - The Adventure of Link",
             "The Legend of Zelda - Ocarina of Time",
@@ -77,7 +77,7 @@
     },
     "deku": {
         "name": "Deku",
-        "games_id": [
+        "games": [
             "The Legend of Zelda - Ocarina of Time",
             "The Legend of Zelda - Majoras Mask",
             "The Legend of Zelda - Oracle of Ages",
@@ -90,7 +90,7 @@
     },
     "deidad": {
         "name": "Deidad",
-        "games_id": [
+        "games": [
             "The Legend of Zelda - A Link to the Past",
             "The Legend of Zelda - Links Awakening",
             "The Legend of Zelda - Ocarina of Time",
@@ -110,7 +110,7 @@
     },
     "demonio": {
         "name": "Demonio",
-        "games_id": [
+        "games": [
             "The Legend of Zelda",
             "The Legend of Zelda - A Link to the Past",
             "The Legend of Zelda - Ocarina of Time",
@@ -130,7 +130,7 @@
     },
     "hada": {
         "name": "Hada",
-        "games_id": [
+        "games": [
             "The Legend of Zelda",
             "Zelda II - The Adventure of Link",
             "The Legend of Zelda - A Link to the Past",
@@ -155,7 +155,7 @@
     },
     "skull_kid": {
         "name": "Skull Kid (Raza)",
-        "games_id": [
+        "games": [
             "The Legend of Zelda - Ocarina of Time",
             "The Legend of Zelda - Majoras Mask",
             "The Legend of Zelda - Twilight Princess"

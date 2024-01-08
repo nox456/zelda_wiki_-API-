@@ -11,7 +11,8 @@ export default async function insert_consoles_data() {
     );
     const db_consoles_names = rows.map((cnsl) => cnsl.name);
     if (db_consoles < json_consoles) {
-        json_consoles_names.forEach(async (name, index) => {
+        for (const name of json_consoles_names) {
+            const index = json_consoles_names.indexOf(name)
             if (!db_consoles_names.includes(name)) {
                 const { name, release_date, description, img } =
                     Object.values(consoles)[index];
@@ -20,12 +21,12 @@ export default async function insert_consoles_data() {
                     [name, release_date, description, img]
                 );
             }
-        });
+        }
     } else if (db_consoles > json_consoles) {
-        db_consoles_names.forEach(async name => {
+        for (const name of db_consoles_names) {
             if (!json_consoles_names.includes(name)) {
                 await db.query("DELETE FROM consoles WHERE name = $1",[name])
             }
-        })
+        }
     }
 }

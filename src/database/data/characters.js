@@ -11,7 +11,8 @@ export default async function insert_characters_data() {
     );
     const db_characters_names = rows.map((character) => character.name);
     if (db_characters < json_characters) {
-        json_characters_names.forEach(async (name, index) => {
+        for (const name of json_characters_names) {
+            const index = json_characters_names.indexOf(name)
             if (!db_characters_names.includes(name)) {
                 const { name, race, games, description, img } =
                     Object.values(characters)[index];
@@ -34,14 +35,14 @@ export default async function insert_characters_data() {
                     [name, race_id, games_id, description, img]
                 );
             }
-        });
+        }
     } else if (db_characters > json_characters) {
-        db_characters_names.forEach(async (name) => {
+        for (const name of db_characters_names) {
             if (!json_characters_names.includes(name)) {
                 await db.query("DELETE FROM characters WHERE name = $1", [
                     name,
                 ]);
             }
-        });
+        }
     }
 }
