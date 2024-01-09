@@ -9,7 +9,7 @@ import raceRoutes from "./routes/raceRoutes.js";
 import consoleRoutes from "./routes/consoleRoutes.js";
 import enemieRoutes from "./routes/enemieRoutes.js";
 
-console.clear();
+// console.clear();
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -22,6 +22,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(join(__dirname, "public")));
+app.use(express.static(join(__dirname,"database")))
 
 // Routes
 app.use((req, res, next) => {
